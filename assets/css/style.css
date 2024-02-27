@@ -1,5 +1,6 @@
 
 /* GENERAL */
+
 *{
     margin: 0;
     padding: 0;
@@ -20,11 +21,28 @@ body{
     display: flex;
 }
 
+/* scroll bar */
+
+::-webkit-scrollbar-track{
+    background-color: #0d0d0d;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #fa0269;
+    border-radius: 10px 
+}
+
+::-webkit-scrollbar{
+    width: 0.3rem;
+}
 
 /* HEADER */
 
 header{
-    padding: 20px 4%;
+    padding: 30px 4%;
+    position: sticky;
+    top: 0px;
 }
 
 header > .interface{
@@ -36,6 +54,7 @@ header > .interface{
 
 a{
     font-family: "DM Sans", sans-serif;
+    text-transform: capitalize;
 }
 
 header a{
@@ -72,6 +91,7 @@ header .btn-contato button{
     border-radius: 30px;
     cursor: pointer;
     color: #fff;
+    text-transform: capitalize;
 }
 
 header a:hover{
@@ -80,15 +100,18 @@ header a:hover{
 }
 
 header .btn-contato button:hover{
-    box-shadow: 0px 0px 8px #fa0269a8;
+    box-shadow: 0px 0px 10px #fa0269d5;
 }
 
 /* HOME */
 
+body{
+    position: relative;
+}
 h1{
     color: #fff;
     font-family: "DM sans", sans-serif;
-    font-size: 65px;
+    font-size: 5vw;
     font-weight: 600;
     margin-bottom: 1rem;
     margin: 0px 0px 10px;
@@ -100,28 +123,28 @@ h1{
 .text-typing{
     color: #7d7d7d;
     font-family: "DM sans", sans-serif;
-    font-size: 28px;
+    font-size: 2vw;
     font-weight: 800;
     margin: 0px 0px 32px;
 }
 
-section.home{
-    padding: 17% 4%;
+section#home{
+    padding: 0% 24px;
     margin: 0 8%;
+    height: 30rem;
 }
 
-section.home.flex{
-    justify-content: center;
-    align-items: center;
+section#home .flex{
+    justify-content: space-between;
+    padding: 10%;
     gap: 90px;
 }
+
 img.vidro, .notebook{
-    width: 30rem;
+    width: 25rem;
     right: 10%;
     position: absolute;
-}
-
-.content{
-    width: 515px;
-    height: 360px;
+    display: block;
+    margin-inline: auto;
+    z-index: -100;
 }
