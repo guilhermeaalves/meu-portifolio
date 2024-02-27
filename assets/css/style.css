@@ -16,6 +16,10 @@ body{
     margin: 0 auto;
 }
 
+.flex{
+    display: flex;
+}
+
 
 /* HEADER */
 
@@ -27,7 +31,7 @@ header > .interface{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 4%;
+    margin: 0 8%;
 }
 
 a{
@@ -101,28 +105,21 @@ h1{
     margin: 0px 0px 32px;
 }
 
-main.home{
-    width: 1280px;
-    height: 720px;
+section.home{
+    padding: 17% 4%;
+    margin: 0 8%;
 }
 
-main{
-    justify-content: space-between;
+section.home.flex{
+    justify-content: center;
     align-items: center;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding: 0% 1%;
-    margin: 0 1%;
-    height: 650px;
+    gap: 90px;
 }
-
 img.vidro, .notebook{
     width: 30rem;
     right: 10%;
     position: absolute;
 }
-
 
 .content{
     width: 515px;
