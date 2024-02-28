@@ -8,8 +8,8 @@
 }
 
 body{
-    background-color: #0d0d0d;
     height: 100%;
+    background-color: #000;
 }
 
 .interface{
@@ -40,16 +40,17 @@ body{
 /* HEADER */
 
 header{
-    padding: 30px 4%;
+    padding: 20px 4%;
     position: sticky;
     top: 0px;
+    background-color: transparent;
 }
 
 header > .interface{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 8%;
+    margin: 0 6%;
 }
 
 a{
@@ -107,6 +108,7 @@ header .btn-contato button:hover{
 
 body{
     position: relative;
+    
 }
 h1{
     color: #fff;
@@ -130,14 +132,15 @@ h1{
 
 section#home{
     padding: 0% 24px;
-    margin: 0 8%;
-    height: 30rem;
+    height: 33rem;
 }
 
 section#home .flex{
     justify-content: space-between;
     padding: 10%;
-    gap: 90px;
+    flex-direction: column;
+    gap: 6rem;
+    position: relative;
 }
 
 img.vidro, .notebook{
@@ -147,4 +150,59 @@ img.vidro, .notebook{
     display: block;
     margin-inline: auto;
     z-index: -100;
+}
+
+/* ABOUT */
+
+section#about{
+    background-color: #0d0d0d;
+    height: 40rem;
+    padding: 120px 20px;
+}
+
+img.foto-de-perfil{
+    width: 22rem;
+}
+
+.textn2{
+    font-family: "DM sans", sans-serif;
+    font-size: 3rem;
+    line-height: 5.2rem;
+    font-weight: 500;
+    color: #fa0269;
+}
+
+section#about .flex{
+    display: flex;
+    justify-content:space-between;
+    margin: 0 110px;
+    gap: 6.7rem;
+    flex-direction: row;
+}
+
+.abouttxt{
+    font-family: "DM sans", sans-serif;
+    font-size: 17px;
+    margin: 24px 0;
+    color: #FFFFFFA8;
+    line-height: 1.5;
+}
+
+img.foto-de-perfil{
+    border-radius: 1rem;
+    max-width: 100%;
+}
+
+section#conhecimentos{
+    height: 40rem;
+    padding: 120px 20px;
+}
+
+.textn3{
+    font-family: "DM sans", sans-serif;
+    font-size: 3rem;
+    line-height: 5.2rem;
+    font-weight: 500;
+    color: #fa0269;
+    margin: 0 35%;
 }
