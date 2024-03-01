@@ -9,7 +9,7 @@
 
 body{
     height: 100%;
-    background-color: #000;
+    background-color: #0a0a0a;
 }
 
 .interface{
@@ -40,10 +40,14 @@ body{
 /* HEADER */
 
 header{
-    padding: 20px 4%;
-    position: sticky;
+    padding: 15px 4%;
+    position: fixed;
     top: 0px;
-    background-color: transparent;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0,0,0,0.1);
+    z-index: 1000;
 }
 
 header > .interface{
@@ -55,14 +59,13 @@ header > .interface{
 
 a{
     font-family: "DM Sans", sans-serif;
-    text-transform: capitalize;
 }
 
 header a{
     color: #7d7d7d;
     text-decoration: none;
     display: inline-block;
-    transition: .2s;
+    transition: .3s;
 }
 
 .logo-nav{
@@ -92,7 +95,6 @@ header .btn-contato button{
     border-radius: 30px;
     cursor: pointer;
     color: #fff;
-    text-transform: capitalize;
 }
 
 header a:hover{
@@ -101,7 +103,7 @@ header a:hover{
 }
 
 header .btn-contato button:hover{
-    box-shadow: 0px 0px 10px #fa0269d5;
+    box-shadow: 0px 0px 6px #fa0269d5;
 }
 
 /* HOME */
@@ -117,7 +119,6 @@ h1{
     font-weight: 600;
     margin-bottom: 1rem;
     margin: 0px 0px 10px;
-    box-sizing: border-box;
     margin-bottom: 1rem;
     line-height: 110%;
 }
@@ -132,18 +133,19 @@ h1{
 
 section#home{
     padding: 0% 24px;
-    height: 33rem;
+    height: 48rem;
+    
 }
 
 section#home .flex{
-    justify-content: space-between;
-    padding: 10%;
+    padding: 40px 10%;
     flex-direction: column;
-    gap: 6rem;
+    justify-content: center;
+    height: 48rem;
     position: relative;
 }
 
-img.vidro, .notebook{
+.vidro, .notebook{
     width: 25rem;
     right: 10%;
     position: absolute;
@@ -155,13 +157,14 @@ img.vidro, .notebook{
 /* ABOUT */
 
 section#about{
-    background-color: #0d0d0d;
-    height: 40rem;
+    background-color: #111111;
+    height: 45rem;
     padding: 120px 20px;
 }
 
 img.foto-de-perfil{
-    width: 22rem;
+    width: 28rem;
+    box-shadow: 0 0 2rem;
 }
 
 .textn2{
@@ -170,12 +173,13 @@ img.foto-de-perfil{
     line-height: 5.2rem;
     font-weight: 500;
     color: #fa0269;
+    opacity: 0.7;
 }
 
 section#about .flex{
     display: flex;
-    justify-content:space-between;
-    margin: 0 110px;
+    justify-content: space-between;
+    margin: 0 50px;
     gap: 6.7rem;
     flex-direction: row;
 }
@@ -191,12 +195,28 @@ section#about .flex{
 img.foto-de-perfil{
     border-radius: 1rem;
     max-width: 100%;
+    transition: .8s;
 }
 
-section#conhecimentos{
-    height: 40rem;
-    padding: 120px 20px;
+img.foto-de-perfil:hover{
+    transform: scale(1.10);
 }
+
+/* HardSkills */
+
+section#conhecimentos{
+    height: 45rem;
+    padding: 120px 20px;
+    background-color: #0a0a0a;
+}
+
+section#conhecimentos .flex{
+
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
 
 .textn3{
     font-family: "DM sans", sans-serif;
@@ -205,4 +225,42 @@ section#conhecimentos{
     font-weight: 500;
     color: #fa0269;
     margin: 0 35%;
+    opacity: 0.7;
+}
+
+.html5,.js,.css3 {
+    width: 4rem;
+}
+
+.card p{
+    font-family: "DM sans", sans-serif;
+    font-size: 17px;
+    color: #FFFFFFA8;
+    line-height: 1.3;
+    text-align: left;
+}
+
+.card h3{
+    font-weight: bold;
+    color: #fff;
+    font-family: "DM sans", sans-serif;
+    font-size: 20px;
+    text-align: left;
+    line-height: 4rem;
+}
+
+.card{
+    padding: 28px;
+    width: 22rem;
+    line-height: 2rem;
+    background-color: #0d0d0d;
+    box-shadow: -1rem 1rem 1rem rgba(0, 0, 0, 0.267);
+    border-radius: 0.6rem;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
 }
