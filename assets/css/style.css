@@ -21,6 +21,9 @@ body{
     display: flex;
 }
 
+body, html{
+    scroll-behavior: smooth;
+}
 /* scroll bar */
 
 ::-webkit-scrollbar-track{
@@ -211,7 +214,6 @@ section#conhecimentos{
 }
 
 section#conhecimentos .flex{
-
     flex-direction: column;
     flex-wrap: wrap;
     gap: 4rem;
