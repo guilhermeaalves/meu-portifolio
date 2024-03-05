@@ -37,7 +37,7 @@ body, html{
 }
 
 ::-webkit-scrollbar{
-    width: 0.3rem;
+    width: .3rem;
 }
 
 /* HEADER */
@@ -144,7 +144,7 @@ section#home .flex{
     padding: 40px 10%;
     flex-direction: column;
     justify-content: center;
-    height: 48rem;
+    height: 45rem;
     position: relative;
 }
 
@@ -176,7 +176,7 @@ img.foto-de-perfil{
     line-height: 5.2rem;
     font-weight: 500;
     color: #fa0269;
-    opacity: 0.7;
+    opacity: .7;
 }
 
 section#about .flex{
@@ -265,4 +265,31 @@ section#conhecimentos .flex{
     justify-content: center;
     align-items: center;
     gap: 4rem;
+}
+
+/* Projetos */
+
+section#projetos{
+    padding: 120px 20px;
+    height: 48rem;
+    background-color: #111111;
+}
+
+section#projetos .grid{
+    display: grid;
+}
+
+.textn4{
+    font-family: "DM sans", sans-serif;
+    font-size: 3rem;
+    line-height: 5.2rem;
+    font-weight: 500;
+    color: #fa0269;
+    margin: 0 35%;
+    opacity: 0.7;
+    text-align: center;
+}
+
+.pontos{
+    width: 1rem;
 }
