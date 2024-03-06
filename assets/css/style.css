@@ -1,15 +1,18 @@
 
-/* GENERAL */
+/* =======  GENERAL======== */
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --cor-primaria-texto: #111111;
+}
 
 body{
     height: 100%;
-    background-color: #111111;
+    background-color: var(--cor-primaria-texto);
 }
 
 .interface{
@@ -24,7 +27,7 @@ body{
 body, html{
     scroll-behavior: smooth;
 }
-/* scroll bar */
+/*======scroll bar====== */
 
 ::-webkit-scrollbar-track{
     background-color: #0a0a0a;
@@ -40,7 +43,7 @@ body, html{
     width: .3rem;
 }
 
-/* HEADER */
+/*=========HEADER========= */
 
 header{
     padding: 15px 4%;
@@ -109,7 +112,7 @@ header .btn-contato button:hover{
     box-shadow: 0px 0px 6px #fa0269d5;
 }
 
-/* HOME */
+/*==========HOME========== */
 
 body{
     position: relative;
@@ -157,7 +160,19 @@ section#home .flex{
     z-index: -100;
 }
 
-/* ABOUT */
+.circle {
+    position: absolute;
+    right: 8%;
+    display: block;
+    margin-inline: auto;
+    width: 32%;
+    height: 50%;
+    background-color: #fa0269;
+    border-radius: 100%;
+    z-index: -1000;
+}
+
+/* =========ABOUT==========*/
 
 section#about{
     background-color: #0a0a0a;
@@ -166,7 +181,8 @@ section#about{
 }
 
 img.foto-de-perfil{
-    width: 28rem;
+    max-width: 100%;
+    width: 40%;
     box-shadow: 0 0 2rem;
 }
 
@@ -206,7 +222,7 @@ img.foto-de-perfil:hover{
     transform: scale(1.10);
 }
 
-/* HardSkills */
+/*=======HardSkills======= */
 
 section#conhecimentos{
     height: 45rem;
@@ -254,7 +270,7 @@ section#conhecimentos .flex{
 
 .card{
     padding: 28px;
-    width: 22rem;
+    width: 28%;
     line-height: 2rem;
     background-color: #0d0d0d;
     box-shadow: -1rem 1rem 1rem rgba(0, 0, 0, 0.267);
@@ -267,11 +283,14 @@ section#conhecimentos .flex{
     align-items: center;
     gap: 4rem;
 }
+section#conhecimentos .card:hover{
+    background-color: rgba(255,255,255,0.07);
+}
 
-/* Projetos */
+/*=======Projetos======= */
 
 section#projetos{
-    padding: 110px;
+    padding: 100px;
     height: 76rem;
     background-color: #111111;
 }
@@ -303,7 +322,11 @@ section#projetos .card{
     align-items: center;
     flex-direction: column;
     gap: 2.5rem;
-    margin: 0 22px;
+    margin: 0;
+}
+
+.card{
+    transition: .5s;
 }
 
 .pontos{
@@ -321,3 +344,30 @@ section#projetos .card p{
     text-align: center;
 }
 
+section#projetos .card:hover{
+    background-color: rgba(255,255,255,0.04);
+}
+
+/*========Contato========= */
+
+section#contato{
+    height: 45rem;
+    padding: 120px 20px;
+    background-color: #111111;
+}
+.textn5{
+    font-family: "DM sans", sans-serif;
+    font-size: 3rem;
+    line-height: 5.2rem;
+    font-weight: 500;
+    color: #fa0269;
+    margin: 0 35%;
+    opacity: 0.7;
+    text-align: center;
+}
+
+section#contato .card2{
+    padding: 28px;
+    width: 28%;
+    line-height: 2rem;
+}
