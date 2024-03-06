@@ -9,7 +9,7 @@
 
 body{
     height: 100%;
-    background-color: #0a0a0a;
+    background-color: #111111;
 }
 
 .interface{
@@ -27,7 +27,7 @@ body, html{
 /* scroll bar */
 
 ::-webkit-scrollbar-track{
-    background-color: #0d0d0d;
+    background-color: #0a0a0a;
     border-radius: 10px;
 }
 
@@ -144,7 +144,7 @@ section#home .flex{
     padding: 40px 10%;
     flex-direction: column;
     justify-content: center;
-    height: 45rem;
+    height: 49rem;
     position: relative;
 }
 
@@ -160,8 +160,8 @@ section#home .flex{
 /* ABOUT */
 
 section#about{
-    background-color: #111111;
-    height: 45rem;
+    background-color: #0a0a0a;
+    height: 47rem;
     padding: 120px 20px;
 }
 
@@ -185,6 +185,7 @@ section#about .flex{
     margin: 0 50px;
     gap: 6.7rem;
     flex-direction: row;
+    padding: 40px;
 }
 
 .abouttxt{
@@ -270,18 +271,22 @@ section#conhecimentos .flex{
 /* Projetos */
 
 section#projetos{
-    padding: 120px 20px;
-    height: 48rem;
+    padding: 110px;
+    height: 76rem;
     background-color: #111111;
 }
 
 section#projetos .grid{
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin: 0px;
 }
 
 .textn4{
     font-family: "DM sans", sans-serif;
     font-size: 3rem;
+    padding: 62px;
     line-height: 5.2rem;
     font-weight: 500;
     color: #fa0269;
@@ -290,6 +295,29 @@ section#projetos .grid{
     text-align: center;
 }
 
+section#projetos .card{
+    height: 22rem;
+    width: 20rem;
+    padding: 40px 4rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin: 0 22px;
+}
+
 .pontos{
     width: 1rem;
+    color: #7d7d7d;
 }
+
+.leaf{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section#projetos .card p{
+    text-align: center;
+}
+
