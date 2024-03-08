@@ -60,6 +60,9 @@ body, html{
     border: none;
     border-radius: 30px;
     cursor: pointer;
+    position: fixed;
+    z-index: 1000;
+    bottom: 0px;
 }
 /*======scroll bar====== */
 
