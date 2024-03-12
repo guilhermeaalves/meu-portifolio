@@ -181,16 +181,15 @@ header .btn-contato button:hover{
     margin-inline: auto;
     width: 72rem;
     gap: 12rem;
-    margin: 0 136px;
 }
 
 
 .notebook{
+    position: relative;
     width: 26rem;
-    left: 20%;
+    right: 2%;
     z-index: -100;
     max-width: 100%;
-    display: block;
 }
 
 .vidro{
