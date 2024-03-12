@@ -10,7 +10,8 @@
 [data-tema="light"]{
     --background-color-principal: rgb(229, 229, 229);
     --background-color-secundaria: rgb(241, 241, 241);
-    --background-color-card: #f1f1f1;
+    --background-color-card1: rgb(229, 229, 229);
+    --background-color-card2: rgb(241, 241, 241);
     --tittle-color: #000000;
     --text-typing-color: #202020;
     --p-color: #202020;
@@ -19,10 +20,9 @@
 
 [data-tema="dark"]{
     --background-color-principal: #0d0d0d;
-    
-    --background-color-principal: #0d0d0d;
     --background-color-secundaria: #1a1a1a;
-    --background-color-card: #0d0d0d;
+    --background-color-card1: #0d0d0d;
+    --background-color-card2: #1a1a1a;
     --tittle-color: #fff;
     --text-typing-color: #7d7d7d;
     --p-color: #FFFFFFA8;
@@ -30,13 +30,7 @@
 }
 
 body{
-    height: 100%;
     background-color: var(    --background-color-principal);
-}
-
-.interface{
-    max-width: 1280px;
-    margin: 0 auto;
 }
 
 .flex{
@@ -46,6 +40,7 @@ body{
 body, html{
     scroll-behavior: smooth;
 }
+
 /* troca de tema */
 
 .sun,.moon{
@@ -53,16 +48,17 @@ body, html{
 }
 
 #btTrocaTema{
-    padding: 10px 40px;
+    padding: 10px 20px;
     font-size: 16px;
     font-weight: 530;
     background-color: #fa0269;
     border: none;
-    border-radius: 30px;
+    border-radius: 20px;
     cursor: pointer;
     position: fixed;
     z-index: 1000;
-    bottom: 0px;
+    bottom: 10px;
+    left: 10px;
 }
 /*======scroll bar====== */
 
@@ -93,11 +89,11 @@ header{
     z-index: 1000;
 }
 
-header > .interface{
+header .interface{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 6%;
+    margin: 0 136px;
 }
 
 a{
@@ -126,7 +122,7 @@ header nav ul{
 
 header nav ul li{
     display:  inline-block;
-    padding: 0 40px;
+    padding: 0 15px;
 }
 
 header .btn-contato button{
@@ -151,59 +147,66 @@ header .btn-contato button:hover{
 
 /*==========HOME========== */
 
-body{
-    position: relative;
-    
+#home{
+    padding: 72px 20px;
+    height: 48rem;
 }
-h1{
+
+.content h1{
     color: var(--tittle-color);
     font-family: "DM sans", sans-serif;
-    font-size: 5vw;
+    font-size: 60px;
     font-weight: 600;
-    margin-bottom: 1rem;
-    margin: 0px 0px 10px;
-    margin-bottom: 1rem;
     line-height: 110%;
+    padding: 0 0 10px;
+    display: inline-block;
 }
 
 .text-typing{
     color: var(--text-typing-color);
     font-family: "DM sans", sans-serif;
-    font-size: 2vw;
+    font-size: 25px;
     font-weight: 800;
-    margin: 0px 0px 32px;
+    display: inline-block;
 }
 
-section#home{
-    padding: 0% 24px;
-    height: 48rem;
-    
-}
 
-section#home .flex{
-    padding: 40px 10%;
-    flex-direction: column;
+#home .flex{
+    display: flex;
+    padding: 0 24px;
+    flex-direction: row;
     justify-content: center;
-    height: 49rem;
-    position: relative;
+    align-items: center;
+    height: 35rem;
+    margin-inline: auto;
+    width: 72rem;
+    gap: 12rem;
+    margin: 0 136px;
 }
 
-.vidro, .notebook{
-    width: 25rem;
-    right: 10%;
-    position: absolute;
-    display: block;
-    margin-inline: auto;
+
+.notebook{
+    width: 26rem;
+    left: 20%;
     z-index: -100;
+    max-width: 100%;
+    display: block;
+}
+
+.vidro{
+    position: absolute;
+    width: 26rem;
+    right: 10%;
+    z-index: -100;
+    max-width: 100%;
 }
 
 .circle {
-    position: absolute;
     right: 8%;
-    display: block;
+    position: absolute;
     margin-inline: auto;
-    width: 32%;
-    height: 50%;
+    width: 400px;
+    height: 400px;
     background-color: #fa0269;
     border-radius: 100%;
     z-index: -1000;
@@ -213,7 +216,6 @@ section#home .flex{
 
 section#about{
     background-color: var(--background-color-secundaria);
-    height: 47rem;
     padding: 120px 20px;
 }
 
@@ -234,6 +236,7 @@ section#about .flex{
     gap: 6.7rem;
     flex-direction: row;
     padding: 40px;
+    width: 90%;
 }
 
 .abouttxt{
@@ -245,9 +248,9 @@ section#about .flex{
 }
 
 img.foto-de-perfil{
-    width: 38%;
+    width: 450px;
+    height: 450px;
     box-shadow: 0 0 2rem;
-    max-width: 100%;
     border-radius: 1rem;
     transition: .8s;
 }
@@ -256,17 +259,79 @@ img.foto-de-perfil:hover{
     transform: scale(1.10);
 }
 
+
+
+/*=======Projetos======= */
+
+section#projetos{
+    padding: 130px 180px;
+    height: 76rem;
+    background-color: var(--background-color-principal);
+}
+
+section#projetos .grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin: 0 auto;
+    margin-inline: auto;
+}
+
+.textn4{
+    font-family: "DM sans", sans-serif;
+    font-size: 3rem;
+    padding: 62px;
+    line-height: 5.2rem;
+    font-weight: 500;
+    color: #fa0269;
+    text-align: center;
+    opacity: 0.7;
+}
+
+section#projetos .card{
+    background-color: var(--background-color-card2);
+    height: 22rem;
+    width: 20rem;
+    padding: 40px 4rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin: 0;
+}
+
+.card{
+    transition: .5s;
+}
+
+.pontos{
+    width: 1rem;
+    color: #7d7d7d;
+}
+
+.leaf{
+    align-items: center;
+    justify-content: center;
+}
+
+section#projetos .card p{
+    text-align: center;
+}
+
+section#projetos .card:hover{
+    background-color: rgba(255,255,255,0.04);
+}
+
 /*=======HardSkills======= */
 
 section#conhecimentos{
-    height: 45rem;
+    height: 48rem;
     padding: 120px 20px;
     background-color: var(--background-color-secundaria);
 }
 
 section#conhecimentos .flex{
     flex-direction: column;
-    flex-wrap: wrap;
     gap: 4rem;
 }
 
@@ -279,6 +344,7 @@ section#conhecimentos .flex{
     color: #fa0269;
     margin: 0 35%;
     opacity: 0.7;
+    text-align: center;
 }
 
 .html5,.js,.css3 {
@@ -306,87 +372,25 @@ section#conhecimentos .flex{
     padding: 28px;
     width: 28%;
     line-height: 2rem;
-    background-color: var(--background-color-card);
+    background-color: var(--background-color-card1);
     box-shadow: -1rem 1rem 1rem rgba(0, 0, 0, 0.267);
     border-radius: 0.6rem;
 }
 
 .cards{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
+    justify-content: space-evenly;
 }
+
 section#conhecimentos .card:hover{
     background-color: rgba(255,255,255,0.1);
-}
-
-/*=======Projetos======= */
-
-section#projetos{
-    padding: 100px;
-    height: 76rem;
-    background-color: var(--background-color-principal);
-}
-
-section#projetos .grid{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
-    margin: 0px;
-}
-
-.textn4{
-    font-family: "DM sans", sans-serif;
-    font-size: 3rem;
-    padding: 62px;
-    line-height: 5.2rem;
-    font-weight: 500;
-    color: #fa0269;
-    margin: 0 35%;
-    opacity: 0.7;
-    text-align: center;
-}
-
-section#projetos .card{
-    height: 22rem;
-    width: 20rem;
-    padding: 40px 4rem;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 2.5rem;
-    margin: 0;
-}
-
-.card{
-    transition: .5s;
-}
-
-.pontos{
-    width: 1rem;
-    color: #7d7d7d;
-}
-
-.leaf{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-section#projetos .card p{
-    text-align: center;
-}
-
-section#projetos .card:hover{
-    background-color: rgba(255,255,255,0.04);
 }
 
 /*========Contato========= */
 
 section#contato{
     height: 42rem;
-    padding: 120px 20px;
+    padding: 80px 20px;
     background-color: var(--background-color-principal);
 }
 .textn5{
@@ -395,13 +399,104 @@ section#contato{
     line-height: 5.2rem;
     font-weight: 500;
     color: #fa0269;
-    margin: 0 35%;
     opacity: 0.7;
-    text-align: center;
+    
 }
 
-section#contato .card2{
+section#contato .flex{
     padding: 28px;
-    width: 28%;
+    width: 50%;
     line-height: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+
+#contato .interface a{
+    font-size: 1.2rem;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--p-color);
+}
+
+#contato .interface img{
+    width: 1.2rem;
+}
+
+#contato ul a{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--background-color-card2);
+    width: 65%;
+}
+
+@media (max-width: 1020px) {
+
+/*==========HEADER========== */
+
+    nav{
+        display: none;
+    }
+
+/*==========HOME========== */
+
+    #home h1{
+        font-size: 40px;
+    }
+
+    #home .flex{
+        padding: 0 34px;
+        margin: 0 136px;
+        display: block;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 27rem;
+    }
+
+    #home .text-typing{
+        font-size: 15px;
+    }
+
+    #home .vidro, .notebook{
+        width: 15rem;
+    }
+
+    #home .circle{
+        width: 200px;
+        height: 200px;
+    }
+
+/*==========ABOUT===========*/
+
+    #about .flex{
+        display: grid;
+        width: 120px;
+    }
+
+    #about .foto-de-perfil{
+        width: 370px;
+        height: 400px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+
+/*==========Conhecimentos===========*/
+
+    #conhecimentos .flex{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3.2rem;
+       
+    }
+
+    #conhecimentos .card{
+        width: 80%;
+    }
 }

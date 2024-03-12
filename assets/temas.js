@@ -10,20 +10,21 @@
 // Saber onde está o atributo de tema
 
 // se o botão for clicado, então...
-document.querySelector('#btTrocaTema').addEventListener('click', () => {
+
     // pegar o elemento com o tema 
     // se o tema for light, então mude o atributo para dark
     // se não for, então mude o atributo para light
 
+document.querySelector('#btTrocaTema').addEventListener('click', () => {
+    
+    
     if (document.documentElement.getAttribute('data-tema') === 'light') {
         document.documentElement.setAttribute('data-tema', 'dark');
     } else {
         document.documentElement.setAttribute('data-tema', 'light');
-    }   
-}) 
+    }
 
-
-
+})
 
 // Trocar o tema:
 // 1. Pegar o elemento com tema
