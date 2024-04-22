@@ -149,7 +149,7 @@ header .btn-contato button:hover{
 
 #home{
     padding: 72px 20px;
-    height: 48rem;
+    height: 100vh;
 }
 
 .content h1{
@@ -229,6 +229,7 @@ section#about{
 }
 
 section#about .flex{
+    height: 100vh;
     display: flex;
     justify-content: space-between;
     margin: 0 50px;
@@ -263,17 +264,14 @@ img.foto-de-perfil:hover{
 /*=======Projetos======= */
 
 section#projetos{
-    padding: 130px 180px;
-    height: 76rem;
+    height: 200vh;
     background-color: var(--background-color-principal);
 }
 
-section#projetos .grid{
+.grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
-    margin: 0 auto;
-    margin-inline: auto;
+    gap: 1rem;
 }
 
 .textn4{
@@ -291,7 +289,6 @@ section#projetos .card{
     background-color: var(--background-color-card2);
     height: 22rem;
     width: 20rem;
-    padding: 40px 4rem;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -324,7 +321,7 @@ section#projetos .card:hover{
 /*=======HardSkills======= */
 
 section#conhecimentos{
-    height: 48rem;
+    height: 120vh;
     padding: 120px 20px;
     background-color: var(--background-color-secundaria);
 }
@@ -355,7 +352,6 @@ section#conhecimentos .flex{
     font-size: 17px;
     color: var(--p-color);
     line-height: 1.3;
-    text-align: left;
 }
 
 .card h3{
@@ -363,13 +359,12 @@ section#conhecimentos .flex{
     color: var(--tittle-color);
     font-family: "DM sans", sans-serif;
     font-size: 20px;
-    text-align: left;
     line-height: 4rem;
 }
 
 .card{
     padding: 28px;
-    width: 28%;
+    width: 22rem;
     line-height: 2rem;
     background-color: var(--background-color-card1);
     box-shadow: -1rem 1rem 1rem rgba(0, 0, 0, 0.267);
@@ -388,7 +383,7 @@ section#conhecimentos .card:hover{
 /*========Contato========= */
 
 section#contato{
-    height: 42rem;
+    height: 100vh;
     padding: 80px 20px;
     background-color: var(--background-color-principal);
 }
