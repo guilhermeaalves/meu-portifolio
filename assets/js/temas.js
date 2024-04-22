@@ -11,20 +11,43 @@
 
 // se o botão for clicado, então...
 
-    // pegar o elemento com o tema 
-    // se o tema for light, então mude o atributo para dark
-    // se não for, então mude o atributo para light
+// pegar o elemento com o tema 
+// se o tema for light, então mude o atributo para dark
+// se não for, então mude o atributo para light
 
 document.querySelector('#btTrocaTema').addEventListener('click', () => {
-    
-    
+
+
     if (document.documentElement.getAttribute('data-tema') === 'light') {
+
+        document.querySelector('#moon').setAttribute('src', 'assets/icons/sun.svg')
+
         document.documentElement.setAttribute('data-tema', 'dark');
+
     } else {
+        document.querySelector('#moon').setAttribute('src', 'assets/icons/moon.svg')
         document.documentElement.setAttribute('data-tema', 'light');
+
     }
 
-})
+});
+
+// document.querySelector('#btTrocaTema').addEventListener('click', () => {
+
+//     if (document.documentElement.getAttribute('data-tema') === 'light') {
+
+//         document.querySelector('#moon').classList.add('oculto');
+        
+//     }
+
+//     else if (document.documentElement.setAttribute('data-tema', 'dark')) {
+
+//         document.querySelector('#sun').classList.remove('oculto');
+
+//     }
+// });
+
+
 
 // Trocar o tema:
 // 1. Pegar o elemento com tema
