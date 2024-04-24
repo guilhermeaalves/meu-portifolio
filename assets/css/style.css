@@ -33,6 +33,10 @@ body{
     background-color: var(    --background-color-principal);
 }
 
+.oculto{
+    display: none;
+}
+
 .flex{
     display: flex;
 }
@@ -56,7 +60,7 @@ body, html{
     border-radius: 20px;
     cursor: pointer;
     position: fixed;
-    z-index: 1000;
+    z-index: 1;
     bottom: 10px;
     left: 10px;
 }
@@ -86,7 +90,7 @@ header{
     right: 0;
     backdrop-filter: blur(10px);
     background-color: var();
-    z-index: 1000;
+    z-index: 1;
 }
 
 header .interface{
@@ -241,7 +245,7 @@ section#about .flex{
 
 .abouttxt{
     font-family: "DM sans", sans-serif;
-    font-size: 17px;
+    font-size: 1rem;
     margin: 24px 0;
     color: var(--p-color);
     line-height: 1.5;
@@ -264,14 +268,18 @@ img.foto-de-perfil:hover{
 /*=======Projetos======= */
 
 section#projetos{
-    height: 200vh;
+    display: flex;
+    justify-content: center;
+    height: 180vh;
     background-color: var(--background-color-principal);
 }
 
 .grid{
+
     display: grid;
+    gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+
 }
 
 .textn4{
