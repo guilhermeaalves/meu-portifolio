@@ -16,6 +16,7 @@
     --text-typing-color: #202020;
     --p-color: #202020;
     --header-background-color: rgba(256,256,256,0.1);
+    --hover-card-color: rgba(158, 158, 158, 0.158);
 }
 
 [data-tema="dark"]{
@@ -27,6 +28,7 @@
     --text-typing-color: #7d7d7d;
     --p-color: #FFFFFFA8;
     --header-background-color: rgba(0,0,0,0.1);
+    --hover-card-color: rgba(255,255,255,0.1);
 }
 
 body{
@@ -323,7 +325,7 @@ section#projetos .card p{
 }
 
 section#projetos .card:hover{
-    background-color: rgba(255,255,255,0.04);
+    background-color: var(--hover-card-color);
 }
 
 /*=======HardSkills======= */
@@ -385,7 +387,7 @@ section#conhecimentos .flex{
 }
 
 section#conhecimentos .card:hover{
-    background-color: rgba(255,255,255,0.1);
+    background-color: var(--hover-card-color);
 }
 
 /*========Contato========= */
@@ -432,22 +434,26 @@ section#contato .flex{
     align-items: center;
     gap: 0.5rem;
     background-color: var(--background-color-card2);
-    width: 65%;
+    width: 21rem;
+    border-radius: 10px;
+}
+
+#contato ul {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 @media (max-width: 1020px) {
 
 /*==========HEADER========== */
 
-    nav{
-        display: none;
-    }
+    nav{display: none;}
 
 /*==========HOME========== */
 
-    #home h1{
-        font-size: 40px;
-    }
+    #home h1{font-size: 40px;}
 
     #home .flex{
         padding: 0 34px;
@@ -459,13 +465,9 @@ section#contato .flex{
         width: 27rem;
     }
 
-    #home .text-typing{
-        font-size: 15px;
-    }
+    #home .text-typing {font-size: 15px;}
 
-    #home .vidro, .notebook{
-        width: 15rem;
-    }
+    #home .vidro, .notebook {width: 15rem;}
 
     #home .circle{
         width: 200px;
@@ -498,7 +500,5 @@ section#contato .flex{
        
     }
 
-    #conhecimentos .card{
-        width: 80%;
-    }
+    #conhecimentos .card {width: 80%;}
 }
