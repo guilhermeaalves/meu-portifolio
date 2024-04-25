@@ -17,16 +17,25 @@
 
 document.querySelector('#btTrocaTema').addEventListener('click', () => {
 
+    const svg = document.querySelectorAll('.icon');
 
     if (document.documentElement.getAttribute('data-tema') === 'light') {
 
         document.querySelector('#moon').setAttribute('src', 'assets/icons/sun.svg')
 
         document.documentElement.setAttribute('data-tema', 'dark');
+        
+        svg.forEach(function(svg){
+            svg.querySelector('path').setAttribute('fill', 'white');
+        });
 
     } else {
         document.querySelector('#moon').setAttribute('src', 'assets/icons/moon.svg')
         document.documentElement.setAttribute('data-tema', 'light');
+
+        svg.forEach(function(svg){
+            svg.querySelector('path').setAttribute('fill', 'black');
+        });
 
     }
 
