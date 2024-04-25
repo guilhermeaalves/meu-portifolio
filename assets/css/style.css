@@ -16,6 +16,7 @@
     --p-color: #202020;
     --header-background-color: rgba(256,256,256,0.1);
     --hover-card-color: rgba(158, 158, 158, 0.158);
+    --hover-header-color: #494949;
 }
 
 [data-tema="dark"]{
@@ -28,10 +29,11 @@
     --p-color: #FFFFFFA8;
     --header-background-color: rgba(0,0,0,0.1);
     --hover-card-color: rgba(255,255,255,0.1);
+    --hover-header-color: #fff;
 }
 
 body{
-    background-color: var(    --background-color-principal);
+    background-color: var(--background-color-principal);
 }
 
 .oculto{
@@ -121,7 +123,7 @@ header a{
     opacity: 0.7;
 }
 
-header nav ul{
+header>ul{
     list-style-type: none; 
 }
 
@@ -142,7 +144,7 @@ header .btn-contato button{
 }
 
 header a:hover{
-    color: #fff;
+    color: var(--hover-header-color);
     transform: scale(1.10);
 }
 
@@ -261,9 +263,7 @@ img.foto-de-perfil{
     transition: .8s;
 }
 
-img.foto-de-perfil:hover{
-    transform: scale(1.10);
-}
+img.foto-de-perfil:hover {transform: scale(1.10);}
 
 
 
@@ -306,9 +306,7 @@ section#projetos .card{
     margin: 0;
 }
 
-.card{
-    transition: .5s;
-}
+.card {transition: .5s;}
 
 .pontos{
     width: 1rem;
@@ -320,9 +318,7 @@ section#projetos .card{
     justify-content: center;
 }
 
-section#projetos .card p{
-    text-align: center;
-}
+section#projetos .card p {text-align: center;}
 
 section#projetos .card:hover{
     background-color: var(--hover-card-color);
